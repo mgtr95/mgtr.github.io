@@ -17,12 +17,12 @@ let myHeading = document.querySelector('h1');
 
 //set function to get name
 function setUserName() {
-    let myName = prompt('Please enter your name.');
+    let myName = prompt('Unesi svoje ime.');
     if(!myName) {
         setUserName();
     } else {
     localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
+    myHeading.textContent = myName + ' je gej';
     }
   }
 
@@ -31,7 +31,7 @@ if(!localStorage.getItem('name')) {
     setUserName();
   } else {
     let storedName = localStorage.getItem('name');
-    myHeading.textContent = 'Mozilla is cool, ' + storedName;
+    myHeading.textContent = storedName + ' je gej';
   }
 
 //set button onclick
